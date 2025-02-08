@@ -9,3 +9,8 @@ output "public_subnet_ids" {
 output "private_subnet_ids" {
   value = [aws_subnet.private_1.id, aws_subnet.private_2.id, aws_subnet.private_3.id]
 }
+
+
+output "instance_public_ip" {
+  value = aws_instance.web.public_ip
+}

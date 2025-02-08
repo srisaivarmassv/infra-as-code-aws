@@ -41,3 +41,12 @@ variable "private_subnet_cidr_2" {
 variable "private_subnet_cidr_3" {
   default = "10.0.103.0/24"
 }
+
+
+variable "ami_id" {
+  default = "ami-04b4f1a9cf54c11d0"
+}
+
+variable "instance_type" {
+  default = "t2.micro"
+}
