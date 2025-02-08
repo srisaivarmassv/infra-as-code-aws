@@ -69,7 +69,8 @@ Terraform will:
 - Install Nginx on the EC2 instance automatically.
 - Using remote backend S3 to store the state file.
   
-<sub>**Note:** The Terraform configuration currently utilizes a remote S3 backend for storing state files. Ensure that the S3 bucket is pre-created before running Terraform. If you prefer to use a local backend, remove the backend.tf file and proceed with `terraform init`.</sub>
+<sub>**Note:** The Terraform configuration currently utilizes a remote S3 backend for storing state files. Ensure that the S3 bucket is pre-created before running Terraform. If you prefer to use a local backend, remove the backend.tf file and proceed with `terraform init`.
+Change the variable names as per your ruquirement.</sub>
 
 4️⃣ Retrieve the EC2 Public IP
 ``` bash
@@ -80,3 +81,24 @@ Copy the public IP and open it in your browser:
 http://<instance_public_ip>
 ```
 You should see the Nginx welcome page.
+
+
+
+🗑️ Destroying the Infrastructure
+
+To delete all resources:
+
+``` bash
+terraform destroy -auto-approve
+```
+
+This will remove:
+
+VPC
+Subnets
+EC2 instance
+S3 Bucket (if force_destroy = true)
+Internet Gateway
+Security Groups
+
+>  Leverage the power of **Terraform** and **AWS** for efficient infrastructure automation. 🚀🌍 

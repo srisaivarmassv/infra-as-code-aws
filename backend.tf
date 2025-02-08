@@ -12,7 +12,7 @@ resource "aws_dynamodb_table" "terraform_locks" {
 
 terraform {
   backend "s3" {
-    bucket         = "ssv-test"
+    bucket         = "var.s3_bucket_name"
     key            = "terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true

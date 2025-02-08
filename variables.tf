@@ -53,7 +53,7 @@ variable "instance_type" {
 
 
 variable "s3_bucket_name" {
-  default = "ssv-bucket"
+  default = "ssv-test"
 }
 
 variable "dynamodb_table_name" {
