@@ -50,3 +50,12 @@ variable "ami_id" {
 variable "instance_type" {
   default = "t2.micro"
 }
+
+
+variable "s3_bucket_name" {
+  default = "ssv-bucket"
+}
+
+variable "dynamodb_table_name" {
+  default = "terraform-lock"
+}
